@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="scott.welsh.s300848432.ui.home.HomeFragment"
+        android:name="scott.welsh.s300848432.ScottFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_scott" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="scott.welsh.s300848432.ui.dashboard.DashboardFragment"
+        android:name="scott.welsh.s300848432.WelshFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_welsh" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="scott.welsh.s300848432.ui.notifications.NotificationsFragment"
+        android:name="scott.welsh.s300848432.S300848432Fragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_s300848432" />
 </navigation>

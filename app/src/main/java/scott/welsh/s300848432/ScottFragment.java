@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +25,8 @@ public class ScottFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    View view;
 
     public ScottFragment() {
         // Required empty public constructor
@@ -59,6 +63,22 @@ public class ScottFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_scott, container, false);
+//        return inflater.inflate(R.layout.fragment_scott, container, false);
+        view = inflater.inflate(R.layout.fragment_scott,
+                container, false);
+        Button button = (Button) view.findViewById(R.id.btnClear);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+
+                Toast.makeText(getContext(),"Clear Canvas",Toast.LENGTH_SHORT);
+
+                CanvasView cv = (CanvasView)view.findViewById(R.id.canvasDraw);
+                cv.clearCanvas();
+            }
+        });
+        return view;
     }
 }
