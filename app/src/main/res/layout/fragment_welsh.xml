@@ -3,23 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7AD1FA"
     android:orientation="vertical"
     tools:context="scott.welsh.s300848432.WelshFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment" />
-
     <Button
-        android:id="@+id/btnCapture"
+        android:id="@+id/scottbtnCapture"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Capture" />
 
     <ImageView
-        android:id="@+id/ImageView_anim"
+        android:id="@+id/scottImageView_anim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -36,28 +32,28 @@
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/rdOneS"
+                android:id="@+id/scottrdOneS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="1S" />
 
             <RadioButton
-                android:id="@+id/rdTwoS"
+                android:id="@+id/scottrdTwoS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="2S" />
 
             <RadioButton
-                android:id="@+id/rdThreeS"
+                android:id="@+id/scottrdThreeS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="3S" />
 
             <RadioButton
-                android:id="@+id/rdFourS"
+                android:id="@+id/scottrdFourS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -71,18 +67,23 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnPlay"
+            android:id="@+id/scottbtnPlay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Play" />
 
         <Button
-            android:id="@+id/btnStop"
+            android:id="@+id/scottbtnStop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Stop" />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_blank_fragment" />
 
 </LinearLayout>

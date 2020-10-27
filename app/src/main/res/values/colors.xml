@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--    Full Name: Scott Welsh-->
+<!--    student ID: 300848432-->
+<!--    section number: 002-->
 <resources>
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+
+    <color name="fragBG1">#CCDDDC</color>
+    <color name="fragBG2">#CFD6DD</color>
+    <color name="fragBG3">#E4D8E4</color>
 </resources>

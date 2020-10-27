@@ -8,6 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+//Full Name: Scott Welsh
+//student ID: 300848432
+//section number: 002
+
 import scott.welsh.s300848432.R;
 
 /**

@@ -1,5 +1,9 @@
 package scott.welsh.s300848432;
 
+//Full Name: Scott Welsh
+//student ID: 300848432
+//section number: 002
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

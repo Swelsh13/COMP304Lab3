@@ -1,5 +1,9 @@
 package scott.welsh.s300848432;
 
+//Full Name: Scott Welsh
+//student ID: 300848432
+//section number: 002
+
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
@@ -87,7 +91,7 @@ public class WelshFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_welsh, container, false);
 
-        Button btnCapture = (Button)view.findViewById(R.id.btnCapture);
+        Button btnCapture = (Button)view.findViewById(R.id.scottbtnCapture);
         btnCapture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -95,7 +99,7 @@ public class WelshFragment extends Fragment {
             }
         });
 
-        final Button onButton = (Button) view.findViewById(R.id.btnPlay);
+        final Button onButton = (Button) view.findViewById(R.id.scottbtnPlay);
         onButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startAnimation();
@@ -103,17 +107,17 @@ public class WelshFragment extends Fragment {
         });
 
         // Handle Stop Button
-        final Button offButton = (Button) view.findViewById(R.id.btnStop);
+        final Button offButton = (Button) view.findViewById(R.id.scottbtnStop);
         offButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 stopAnimation();
             }
         });
 
-        RadioButton rd1S = (RadioButton) view.findViewById(R.id.rdOneS);
-        RadioButton rd2S = (RadioButton) view.findViewById(R.id.rdTwoS);
-        RadioButton rd3s = (RadioButton) view.findViewById(R.id.rdThreeS);
-        RadioButton rd4s = (RadioButton) view.findViewById(R.id.rdFourS);
+        RadioButton rd1S = (RadioButton) view.findViewById(R.id.scottrdOneS);
+        RadioButton rd2S = (RadioButton) view.findViewById(R.id.scottrdTwoS);
+        RadioButton rd3s = (RadioButton) view.findViewById(R.id.scottrdThreeS);
+        RadioButton rd4s = (RadioButton) view.findViewById(R.id.scottrdFourS);
         RadioButton.OnClickListener speedClickListener = new View.OnClickListener()
         {
             @Override
@@ -121,16 +125,16 @@ public class WelshFragment extends Fragment {
             {
                 int newSpeed = 250;
                 switch (v.getId()){
-                    case R.id.rdOneS:
+                    case R.id.scottrdOneS:
                         newSpeed = 250;
                         break;
-                    case R.id.rdTwoS:
+                    case R.id.scottrdTwoS:
                         newSpeed = 500;
                         break;
-                    case R.id.rdThreeS:
+                    case R.id.scottrdThreeS:
                         newSpeed = 750;
                         break;
-                    case R.id.rdFourS:
+                    case R.id.scottrdFourS:
                         newSpeed = 1000;
                         break;
                 }
@@ -158,7 +162,7 @@ public class WelshFragment extends Fragment {
     private void startAnimation()
     {
 
-        ImageView img = (ImageView)mView.findViewById(R.id.ImageView_anim);
+        ImageView img = (ImageView)mView.findViewById(R.id.scottImageView_anim);
 
         BitmapDrawable frame1 = (BitmapDrawable)getResources().getDrawable(R.drawable.can0);
         BitmapDrawable frame2 = (BitmapDrawable)getResources().getDrawable(R.drawable.can1);
