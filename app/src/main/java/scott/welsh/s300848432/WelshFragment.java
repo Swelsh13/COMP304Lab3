@@ -160,12 +160,12 @@ public class WelshFragment extends Fragment {
 
         ImageView img = (ImageView)mView.findViewById(R.id.ImageView_anim);
 
-        BitmapDrawable frame1 = (BitmapDrawable)getResources().getDrawable(R.drawable.boy1);
-        BitmapDrawable frame2 = (BitmapDrawable)getResources().getDrawable(R.drawable.boy2);
-        BitmapDrawable frame3 = (BitmapDrawable)getResources().getDrawable(R.drawable.boy3);
-        BitmapDrawable frame4 = (BitmapDrawable)getResources().getDrawable(R.drawable.boy4);
-        BitmapDrawable frame5 = (BitmapDrawable)getResources().getDrawable(R.drawable.boy5);
-        BitmapDrawable frame6 = (BitmapDrawable)getResources().getDrawable(R.drawable.boy6);
+        BitmapDrawable frame1 = (BitmapDrawable)getResources().getDrawable(R.drawable.can0);
+        BitmapDrawable frame2 = (BitmapDrawable)getResources().getDrawable(R.drawable.can1);
+        BitmapDrawable frame3 = (BitmapDrawable)getResources().getDrawable(R.drawable.can2);
+        BitmapDrawable frame4 = (BitmapDrawable)getResources().getDrawable(R.drawable.can3);
+        BitmapDrawable frame5 = (BitmapDrawable)getResources().getDrawable(R.drawable.can4);
+        BitmapDrawable frame6 = (BitmapDrawable)getResources().getDrawable(R.drawable.can5);
 
         // Get the background, which has been compiled to an AnimationDrawable object.
         int reasonableDuration = speed;
