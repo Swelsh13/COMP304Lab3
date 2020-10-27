@@ -22,6 +22,29 @@ import androidx.navigation.ui.NavigationUI;
 
 public class ScottActivity extends AppCompatActivity {
 
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder dialog=new AlertDialog.Builder(ScottActivity.this);
+        dialog.setMessage("Are you sure you want to close");
+        dialog.setTitle("Dialog Box");
+        dialog.setPositiveButton("Exit",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,
+                                        int which) {
+                        ScottActivity.super.onBackPressed();
+                    }
+                });
+        dialog.setNegativeButton("cancel",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(getApplicationContext(),"Thank you for staying",Toast.LENGTH_LONG).show();
+            }
+        });
+        AlertDialog alertDialog=dialog.create();
+        alertDialog.show();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,34 +60,6 @@ public class ScottActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
 
 
-        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
-            @Override
-
-            public void handleOnBackPressed() {
-                // Handle the back button event
-                AlertDialog.Builder dialog=new AlertDialog.Builder(getApplicationContext());
-                dialog.setMessage("Are you sure you want to close");
-                dialog.setTitle("Dialog Box");
-                dialog.setPositiveButton("Exit",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,
-                                                int which) {
-                                ScottActivity.super.onBackPressed();
-                            }
-                        });
-                dialog.setNegativeButton("cancel",new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(),"Thank you for staying",Toast.LENGTH_LONG).show();
-                    }
-                });
-                AlertDialog alertDialog=dialog.create();
-                alertDialog.show();
-
-            }
-        };
-
-        getOnBackPressedDispatcher().addCallback(callback);
 
 
 
