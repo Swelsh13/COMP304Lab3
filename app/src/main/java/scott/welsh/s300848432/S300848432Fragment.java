@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 //Full Name: Scott Welsh
 //student ID: 300848432
@@ -65,6 +68,18 @@ public class S300848432Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_s300848432, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_s300848432, container, false);
+
+
+        // We will animate the imageview
+        ImageView layoutToAnimate = (ImageView)view.findViewById(R.id.scottImageMoon);
+
+        // Load the appropriate animation
+        Animation an =  AnimationUtils.loadAnimation(getContext(), R.anim.orbit);
+        // Start the animationa
+        layoutToAnimate.startAnimation(an);
+        return view;
+
     }
 }
