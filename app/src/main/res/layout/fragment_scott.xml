@@ -19,7 +19,7 @@
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/rdStrokeSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -28,14 +28,14 @@
                 tools:text="Small" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/rdStrokeMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Medium" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/rdStrokeLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -48,7 +48,7 @@
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/rdColorBlack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -58,14 +58,14 @@
                 tools:text="Black" />
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/rdColorRed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Red" />
 
             <RadioButton
-                android:id="@+id/radioButton6"
+                android:id="@+id/rdColorBlue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

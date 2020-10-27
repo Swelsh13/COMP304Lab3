@@ -6,6 +6,8 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -40,13 +42,26 @@ public class CanvasView extends View {
     }
 
     public void clearCanvas(){
-        Toast.makeText(this.getContext(),"Clear Canvas",Toast.LENGTH_SHORT);
-        mCanvas.drawColor(Color.WHITE);
+        Toast.makeText(this.getContext(),"Clear Canvas",Toast.LENGTH_SHORT).show();
+//        mCanvas.drawColor(Color.WHITE);
+//        mPaint.setColor(Color.WHITE);
+        mPath = new Path();
+        this.mCanvas.drawPath(mPath, mPaint);
+        invalidate();
+
     }
 
     public void setColor( int newColor){
 
         mPaint.setColor(newColor);
+        invalidate();
+
+    }
+
+    public void setStrokeWidth( float newWidth){
+
+        mPaint.setStrokeWidth(newWidth);
+        invalidate();
 
     }
 

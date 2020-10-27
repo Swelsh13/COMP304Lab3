@@ -1,5 +1,6 @@
 package scott.welsh.s300848432;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 /**
@@ -72,13 +74,70 @@ public class ScottFragment extends Fragment {
             @Override
             public void onClick(View v)
             {
-
-                Toast.makeText(getContext(),"Clear Canvas",Toast.LENGTH_SHORT);
-
                 CanvasView cv = (CanvasView)view.findViewById(R.id.canvasDraw);
                 cv.clearCanvas();
             }
         });
+
+        RadioButton rdsmall = (RadioButton) view.findViewById(R.id.rdStrokeSmall);
+        RadioButton rdmed = (RadioButton) view.findViewById(R.id.rdStrokeMedium);
+        RadioButton rdlarge = (RadioButton) view.findViewById(R.id.rdStrokeLarge);
+        RadioButton.OnClickListener strokeClickListenener = new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                float stroke = 1;
+                switch (v.getId()){
+                    case R.id.rdStrokeLarge:
+                        stroke = 24;
+                        break;
+                    case R.id.rdStrokeMedium:
+                        stroke = 14;
+                        break;
+                    case R.id.rdStrokeSmall:
+                        stroke = 4;
+                        break;
+                }
+                CanvasView cv = (CanvasView)view.findViewById(R.id.canvasDraw);
+
+                cv.setStrokeWidth(stroke);
+            }
+        };
+        rdsmall.setOnClickListener(strokeClickListenener);
+        rdmed.setOnClickListener(strokeClickListenener);
+        rdlarge.setOnClickListener(strokeClickListenener);
+
+        RadioButton rdsBlack = (RadioButton) view.findViewById(R.id.rdColorBlack);
+        RadioButton rdBlue = (RadioButton) view.findViewById(R.id.rdColorBlue);
+        RadioButton rdRed = (RadioButton) view.findViewById(R.id.rdColorRed);
+        RadioButton.OnClickListener colorClickListenener = new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                int color = Color.BLACK;
+                switch (v.getId()){
+                    case R.id.rdColorRed:
+                        color = Color.RED;
+                        break;
+                    case R.id.rdColorBlue:
+                        color = Color.BLUE;
+                        break;
+                    case R.id.rdColorBlack:
+                        color = Color.BLACK;
+                        break;
+                }
+                CanvasView cv = (CanvasView)view.findViewById(R.id.canvasDraw);
+
+                cv.setColor(color);
+            }
+        };
+        rdsBlack.setOnClickListener(colorClickListenener);
+        rdBlue.setOnClickListener(colorClickListenener);
+        rdRed.setOnClickListener(colorClickListenener);
+
+
         return view;
     }
 }
