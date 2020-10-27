@@ -14,11 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:rotation="45"
-        android:text="@string/hello_blank_fragment"
+        android:text="@string/scottWelsh"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/scottWelsh" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -26,11 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:rotation="-45"
-        android:text="@string/hello_blank_fragment"
+        android:text="@string/scottScott"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/scottScott" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/scottImageEarth"
