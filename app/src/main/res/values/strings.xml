@@ -8,4 +8,27 @@
     <string name="title_notifications">Notifications</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="scottsmall">Small</string>
+    <string name="scottmedium">Medium</string>
+    <string name="scottlarge">Large</string>
+    <string name="scottblack">Black</string>
+    <string name="scottRed">Red</string>
+    <string name="scottBlue">Blue</string>
+    <string name="scottStudentID">Scott Welsh 300 848 432</string>
+    <string name="scottClear">Clear</string>
+    <string name="scottCapture">Capture</string>
+    <string name="scott1S">1S</string>
+    <string name="scott2S">2S</string>
+    <string name="scott3S">3S</string>
+    <string name="scott4S">4S</string>
+    <string name="scottPlay">Play</string>
+    <string name="scottStop">Stop</string>
+    <string name="scottScott">Scott</string>
+    <string name="scottWelsh">Welsh</string>
+    <string name="scottQuestion">Are you sure you want to close</string>
+    <string name="scottDialog">Dialog Box</string>
+    <string name="scottCancel">Cancel</string>
+    <string name="scottExit">Exit</string>
+    <string name="scottThanks">Thank you for staying</string>
+
 </resources>

@@ -12,7 +12,7 @@
         android:id="@+id/scottbtnCapture"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Capture" />
+        android:text="@string/scottCapture" />
 
     <ImageView
         android:id="@+id/scottImageView_anim"
@@ -36,28 +36,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="1S" />
+                android:text="@string/scott1S" />
 
             <RadioButton
                 android:id="@+id/scottrdTwoS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="2S" />
+                android:text="@string/scott2S" />
 
             <RadioButton
                 android:id="@+id/scottrdThreeS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="3S" />
+                android:text="@string/scott3S" />
 
             <RadioButton
                 android:id="@+id/scottrdFourS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="4S" />
+                android:text="@string/scott4S" />
         </RadioGroup>
     </LinearLayout>
 
@@ -71,19 +71,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Play" />
+            android:text="@string/scottPlay" />
 
         <Button
             android:id="@+id/scottbtnStop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Stop" />
+            android:text="@string/scottStop" />
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment" />
 
 </LinearLayout>

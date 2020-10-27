@@ -46,7 +46,7 @@ public class CanvasView extends View {
     }
 
     public void clearCanvas(){
-        Toast.makeText(this.getContext(),"Clear Canvas",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getContext(),R.string.scottClear,Toast.LENGTH_SHORT).show();
 //        mCanvas.drawColor(Color.WHITE);
 //        mPaint.setColor(Color.WHITE);
         mPath = new Path();

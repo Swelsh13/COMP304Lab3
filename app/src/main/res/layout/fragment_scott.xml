@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:checked="true"
-                android:text="RadioButton"
+                android:text="@string/scottsmall"
                 tools:text="Small" />
 
             <RadioButton
@@ -33,14 +33,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Medium" />
+                android:text="@string/scottmedium" />
 
             <RadioButton
                 android:id="@+id/rdStrokeLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Large" />
+                android:text="@string/scottlarge" />
         </RadioGroup>
 
         <RadioGroup
@@ -55,7 +55,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:checked="true"
-                android:text="RadioButton"
+                android:text="@string/scottblack"
                 tools:text="Black" />
 
             <RadioButton
@@ -63,14 +63,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Red" />
+                android:text="@string/scottRed" />
 
             <RadioButton
                 android:id="@+id/rdColorBlue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Blue" />
+                android:text="@string/scottBlue" />
         </RadioGroup>
 
     </LinearLayout>
@@ -79,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment"
-        tools:text="Scott Welsh 300 848 432" />
+        tools:text="@string/scottStudentID" />
 
     <scott.welsh.s300848432.CanvasView
         android:id="@+id/canvasDraw"
@@ -92,6 +92,6 @@
         style="@style/Fragment1Theme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Clear" />
+        android:text="@string/scottClear" />
 
 </LinearLayout>

@@ -26,19 +26,19 @@ public class ScottActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         AlertDialog.Builder dialog=new AlertDialog.Builder(ScottActivity.this);
-        dialog.setMessage("Are you sure you want to close");
-        dialog.setTitle("Dialog Box");
-        dialog.setPositiveButton("Exit",
+        dialog.setMessage(R.string.scottQuestion);
+        dialog.setTitle(R.string.scottDialog);
+        dialog.setPositiveButton(R.string.scottExit,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,
                                         int which) {
                         ScottActivity.super.onBackPressed();
                     }
                 });
-        dialog.setNegativeButton("cancel",new DialogInterface.OnClickListener() {
+        dialog.setNegativeButton(R.string.scottCancel,new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getApplicationContext(),"Thank you for staying",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),R.string.scottThanks,Toast.LENGTH_LONG).show();
             }
         });
         AlertDialog alertDialog=dialog.create();
