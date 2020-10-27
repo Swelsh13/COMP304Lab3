@@ -1,12 +1,21 @@
 package scott.welsh.s300848432;
 
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RadioButton;
 
 import scott.welsh.s300848432.R;
 
@@ -16,7 +25,9 @@ import scott.welsh.s300848432.R;
  * create an instance of this fragment.
  */
 public class WelshFragment extends Fragment {
-
+    AnimationDrawable mframeAnimation = null;
+    View mView;
+    int speed = 250;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,6 +40,19 @@ public class WelshFragment extends Fragment {
     public WelshFragment() {
         // Required empty public constructor
     }
+
+
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+
+    private void dispatchTakePictureIntent() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        try {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        } catch (ActivityNotFoundException e) {
+            // display error state to the user
+        }
+    }
+
 
     /**
      * Use this factory method to create a new instance of
@@ -61,6 +85,110 @@ public class WelshFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_welsh, container, false);
+        View view = inflater.inflate(R.layout.fragment_welsh, container, false);
+
+        Button btnCapture = (Button)view.findViewById(R.id.btnCapture);
+        btnCapture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dispatchTakePictureIntent();
+            }
+        });
+
+        final Button onButton = (Button) view.findViewById(R.id.btnPlay);
+        onButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startAnimation();
+            }
+        });
+
+        // Handle Stop Button
+        final Button offButton = (Button) view.findViewById(R.id.btnStop);
+        offButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                stopAnimation();
+            }
+        });
+
+        RadioButton rd1S = (RadioButton) view.findViewById(R.id.rdOneS);
+        RadioButton rd2S = (RadioButton) view.findViewById(R.id.rdTwoS);
+        RadioButton rd3s = (RadioButton) view.findViewById(R.id.rdThreeS);
+        RadioButton rd4s = (RadioButton) view.findViewById(R.id.rdFourS);
+        RadioButton.OnClickListener speedClickListener = new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                int newSpeed = 250;
+                switch (v.getId()){
+                    case R.id.rdOneS:
+                        newSpeed = 250;
+                        break;
+                    case R.id.rdTwoS:
+                        newSpeed = 500;
+                        break;
+                    case R.id.rdThreeS:
+                        newSpeed = 750;
+                        break;
+                    case R.id.rdFourS:
+                        newSpeed = 1000;
+                        break;
+                }
+
+                setAnimSpeed(newSpeed);
+            }
+        };
+        rd1S.setOnClickListener(speedClickListener);
+        rd2S.setOnClickListener(speedClickListener);
+        rd3s.setOnClickListener(speedClickListener);
+        rd4s.setOnClickListener(speedClickListener);
+
+
+        mView = view;
+        return view;
+    }
+
+    private void setAnimSpeed(int newSpeed){
+        speed = newSpeed;
+        mframeAnimation.stop();
+        startAnimation();
+    }
+
+
+    private void startAnimation()
+    {
+
+        ImageView img = (ImageView)mView.findViewById(R.id.ImageView_anim);
+
+        BitmapDrawable frame1 = (BitmapDrawable)getResources().getDrawable(R.drawable.boy1);
+        BitmapDrawable frame2 = (BitmapDrawable)getResources().getDrawable(R.drawable.boy2);
+        BitmapDrawable frame3 = (BitmapDrawable)getResources().getDrawable(R.drawable.boy3);
+        BitmapDrawable frame4 = (BitmapDrawable)getResources().getDrawable(R.drawable.boy4);
+        BitmapDrawable frame5 = (BitmapDrawable)getResources().getDrawable(R.drawable.boy5);
+        BitmapDrawable frame6 = (BitmapDrawable)getResources().getDrawable(R.drawable.boy6);
+
+        // Get the background, which has been compiled to an AnimationDrawable object.
+        int reasonableDuration = speed;
+        mframeAnimation = new AnimationDrawable();
+        mframeAnimation.setOneShot(false);	// loop continuously
+        mframeAnimation.addFrame(frame1, reasonableDuration);
+        mframeAnimation.addFrame(frame2, reasonableDuration);
+        mframeAnimation.addFrame(frame3, reasonableDuration);
+        mframeAnimation.addFrame(frame4, reasonableDuration);
+        mframeAnimation.addFrame(frame5, reasonableDuration);
+        mframeAnimation.addFrame(frame6, reasonableDuration);
+        mframeAnimation.addFrame(frame6, reasonableDuration);
+        mframeAnimation.addFrame(frame6, reasonableDuration);
+
+        img.setBackground(mframeAnimation);
+
+        mframeAnimation.setVisible(true,true);
+        mframeAnimation.start();
+    }
+    private void stopAnimation()
+    {
+        mframeAnimation.stop();
+        mframeAnimation.setVisible(false,false);
+
     }
 }
